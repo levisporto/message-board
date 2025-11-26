@@ -41,3 +41,18 @@ themeSwitch.addEventListener("change", ({ target: { checked } }) => {
     localStorage.setItem("@jos3sLinktree/Theme", "light");
   }
 });
+
+
+fetch('http://localhost:3000/messages')
+.then(res =>res.json())
+.then(messages => {
+  const ul = document.getElementById('lista_mensagens')
+  messages.forEach(p=>{
+    const li = document.createElement('li')
+    li.textContent = 'viado'
+    li.textContent = ' "' + `${p.nome}` + '"' + ' - escrito por' + ` ${p.autor}`
+    //li.textContent = '${p.nome}` -  `${p.autor}`
+    ul.appendChild(li)
+  })
+})
+
