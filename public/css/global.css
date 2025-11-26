@@ -51,5 +51,8 @@ a:hover{
 
 #lista_mensagens
 {
+  display: flex;
     list-style-type: none;
+    flex-direction: column;
+    gap: 20px;
 }
