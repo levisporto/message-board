@@ -50,7 +50,7 @@ fetch('http://localhost:3000/messages')
   messages.forEach(p=>{
     const li = document.createElement('a')
     newMessage.appendChild(li);
-    li.textContent = ' "' + `${p.nome}` + '"' + ' - escrito por' + ` ${p.autor}`
+    li.textContent = ' "' + `${p.nome}` + '"' + ' - por' + ` ${p.autor}`
     li.classList.add("link");
    
   })

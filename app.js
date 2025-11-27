@@ -22,8 +22,8 @@ const db = new Database('messages.db');
 db.exec(`
   CREATE TABLE IF NOT EXISTS message (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    autor VARCHAR(180),
+    nome VARCHAR(180),
+    autor VARCHAR(18),
     posted_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 `);
