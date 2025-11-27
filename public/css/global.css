@@ -58,4 +58,6 @@ a:hover{
     list-style-type: none;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-end;
+    height: 100px;
 }

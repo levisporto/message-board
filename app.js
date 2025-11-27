@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path');
-
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'))
 
@@ -23,11 +23,20 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS message (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
-    autor VARCHAR(180)
+    autor VARCHAR(180),
+    posted_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 `);
 
 const insert = db.prepare('INSERT INTO message (nome, autor) VALUES (?, ?)');
+
+
+app.post('/message',
+    (req, res) => {
+        const {nome, autor} = req.body
+        insert.run(nome, autor);
+res.redirect('/')}
+    )
 
 
 

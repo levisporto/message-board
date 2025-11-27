@@ -33,7 +33,7 @@ main>h3{
   gap: 1rem;
 }
 
-.link{
+.link {
   border: 1.5px solid var(--purple);
   border-radius:0 .8rem .8rem;
   box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.137);
@@ -48,9 +48,47 @@ main>h3{
   gap:10px;
 }
 
+.input{
+  border: 1.5px solid var(--purple);
+  border-radius:0 .8rem .8rem;
+  box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.137);
+  padding:.8rem 1rem;
+  max-width:20rem;
+  text-align:center;
+  transition:all 0.4s ease-in-out;
+font-family: Verdana, sans-serif;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom: 2%;
+}
+
+button{
+  border: 1.5px solid var(--purple);
+  border-radius:0 .8rem .8rem;
+  box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.137);
+  padding:.8rem 1rem;
+  max-width:20rem;
+  text-align:center;
+  transition:all 0.4s ease-in-out;
+font-family: Verdana, sans-serif;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom: 2%;
+}
+
 .dark .link{
   color: var(--white);
 }
+
+
+button:hover{
+  background: black;
+  color:var(--white);
+  opacity: 1;
+}
+
 
 .link:hover{
   background:var(--purple);
